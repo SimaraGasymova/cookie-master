@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Steppe-Book';
+    src: url('../fonts/Steppe-Book.ttf');
+}
+
+@font-face {
+    font-family: 'Steppe-ExtraBold';
+    src: url('../fonts/Steppe-ExtraBold.ttf');
+}
+
+body {
+    background: #5243F4;
+    font-family: 'Steppe-Book', sans-serif;
+    color: white;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.button-zakaz {
+    background-color: white;
+    border-radius: 60px;
+    width: 178px;
+    height: 58px;
+    box-sizing: border-box;
+    padding: 18px;
+    text-align: center;
+    font-size: 18px;
+    color: #5243F4;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+
+}
+
+.button:hover {
+    background-color: #eeeeee;
+}
+
+.common-title {
+    font-family: 'Steppe-ExtraBold', sans-serif;
+    font-size: 60px;
+    line-height: 100%;
+
+}
+
+.header {
+    padding: 40px 0;
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    vertical-align: bottom;
+}
+
+.menu {
+    margin-left: 250px;
+}
+
+.menu-list {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+}
+
+.menu-item a {
+    font-size: 20px;
+    line-height: 130%;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+.menu-item a:hover {
+    border-bottom: 2px solid white;
+}
+
+
+
+.button-violet-button {
+    background: #5243F4;
+    border-radius: 60px;
+    width: 178px;
+    height: 58px;
+    box-sizing: border-box;
+    padding: 18px;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+.delCart {
+    background: rgb(247, 197, 197);
+    border-radius: 60px;
+    width: 178px;
+    height: 58px;
+    box-sizing: border-box;
+    /* padding: 14px; */
+    text-align: center;
+    /* margin-bottom: 10px; */
+    font-size: 20px;
+    color: #0c0a1e;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    padding: 5px 10px;
+
+}
+
+.delCart:hover{
+    background: rgb(247, 58, 58);
+}
+
+.perValuta{
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    border: 1px solid white;
+    padding: 5px 10px;
+    height: 25px;
+    min-width:25px;
+    border-radius: 50px;
+    text-align: center;
+    cursor: pointer;
+    line-height: 28px;
+    z-index: 1;
+    user-select: none;
+    transform: scale(1);
+    animation: pulseShadow 2s infinite;
+}
+
+@keyframes pulseShadow {
+    0% {
+        box-shadow: 0 0 0 0px rgba(255, 255, 255, 0);
+    }
+
+    50% {
+        box-shadow: 0 0 0 9px rgba(255, 255, 255, 0.25);
+    }
+
+    100% {
+        box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+    }
+}
+
+
+
+/* Тут для формы */
+
+.formZakaz {
+    display: none; /* скрыто по умолчанию */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%; 
+    overflow: auto; /* позволяет прокручивать если нужно */
+    background-color: rgba(0, 0, 0, 0.4); /* полупрозрачный черный фон */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    color: black;
+}
+
+.dannie{
+    padding: 5px;
+    display: grid;
+    grid-template-columns: auto;
+    gap: 5px;
+}
+
+.close {
+    color: #aaa;
+    float: right; /* выравнивание по правому краю */
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+.cart__list_nothing{
+    background: white;
+    color: #5243F4;
+    font-size: 25px;
+    border-radius: 15px;
+    padding: 20px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart__list{
+    background: white;
+    color: #5243F4;
+    font-size: 25px;
+    padding: 20px 20px;
+    display: grid;
+    grid-template-columns: repeat(1, 500px);
+    gap: 90px 24px;
+    overflow-y: auto;
+}
+
+.cart-item{
+    background: rgb(237, 238, 238);
+    color: #5243F4;
+    font-size: 25px;
+    border-radius: 15px;
+    padding: 15px;
+
+}
+
+.cataloglink{
+    color: #5243F4;
+    font-size: 20px;
+    text-decoration: none;
+}
+.cataloglink:hover{
+    color: rgb(214, 186, 2);
+}
